@@ -1,4 +1,4 @@
-const currentListSample = {
+const sampleBooks = {
   "status": "OK",
   "copyright": "Copyright (c) 2023 The New York Times Company.  All Rights Reserved.",
   "num_results": 15,
@@ -965,3 +965,5 @@ const currentListSample = {
       "corrections": []
   }
 }
+
+export default sampleBooks;
