@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import './Form.css'
 
-const Form = () => {
+const Form = ( { filterBooks} ) => {
   const [searchQuery, setSearchQuery] = useState('')
   // const [filteredBooks, setFilteredBooks] = useState([])
 
-console.log(searchQuery)
   return (
     <form>
       <input type="search" onChange={(event) => setSearchQuery(event.target.value)}></input>
-      <button>Search</button>
+      <button onClick={(event) => filterBooks(event)}>Search</button>
     </form>
   )
 }

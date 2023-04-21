@@ -12,9 +12,14 @@ import sampleBook from '../../sampleData/sampleBook'
 const App = () => {
   const [allBooks, setAllBooks] = useState(sampleBooks)
 
+  const filterBooks = (event) => {
+    event.preventDefault()
+    console.log('hello')
+  }
+
   return (
     <div className="App">
-      <Header />
+      <Header searchBooks={filterBooks}/>
       <Switch>
         <Route exact path='/'><Books allBooks={allBooks}/></Route>
         <Route path='/:id' render={({match}) => {
