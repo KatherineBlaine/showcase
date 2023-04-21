@@ -3,7 +3,7 @@ import Book from '../Book/Book';
 import './Books.css'
 
 const Books = ({ allBooks }) => {
-  const bookCards = allBooks.results.books.map(book => {
+  const bookCards = allBooks.map(book => {
     return (
       <Book
         img={book.book_image}
