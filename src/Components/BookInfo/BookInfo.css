@@ -1,0 +1,18 @@
+.book-info {
+  display: flex;
+  justify-content: center;
+  /* width: 60vw; */
+}
+
+.book-title {
+  text-align: center;
+}
+
+.right-content {
+  text-align: center;
+  width: 50%;
+}
+
+.description {
+  width: fit-content;
+}
