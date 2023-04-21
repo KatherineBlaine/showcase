@@ -15,8 +15,11 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <BookInfo selectedBook={sampleBook}/>
-      {/* <Books allBooks={allBooks}/> */}
+      <Switch>
+        <Route exact path='/'><Books allBooks={allBooks}/></Route>
+        <Route exact path='/bookInfo'><BookInfo selectedBook={sampleBook}/></Route>
+      </Switch>
+     
     </div>
   );
 }
