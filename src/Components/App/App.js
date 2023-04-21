@@ -17,7 +17,14 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/'><Books allBooks={allBooks}/></Route>
-        <Route exact path='/bookInfo'><BookInfo selectedBook={sampleBook}/></Route>
+        <Route path='/:id' render={({match}) => {
+          console.log(match.params.id)
+          const selectedBook = allBooks.results.books.find(book => book.primary_isbn10 === match.params.id)
+          return (
+            <BookInfo selectedBook={selectedBook}/>
+          )
+        }}>
+        </Route>
       </Switch>
      
     </div>
