@@ -10,21 +10,16 @@ import sampleBook from '../../sampleData/sampleBook'
 
 
 const App = () => {
-  const [allBooks, setAllBooks] = useState(sampleBooks)
-
-  const filterBooks = (event) => {
-    event.preventDefault()
-    console.log('hello')
-  }
+  const [allBooks, setAllBooks] = useState(sampleBooks.results.books)
 
   return (
     <div className="App">
-      <Header searchBooks={filterBooks}/>
+      <Header />
       <Switch>
         <Route exact path='/'><Books allBooks={allBooks}/></Route>
         <Route path='/:id' render={({match}) => {
           console.log(match.params.id)
-          const selectedBook = allBooks.results.books.find(book => book.primary_isbn10 === match.params.id)
+          const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
           return (
             <BookInfo selectedBook={selectedBook}/>
           )
