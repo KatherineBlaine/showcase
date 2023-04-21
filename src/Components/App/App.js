@@ -5,12 +5,29 @@ import Books from '../Books/Books';
 import BookInfo from '../BookInfo/BookInfo';
 import Header from '../Header/Header';
 import './App.css';
+import { fetchApi } from '../../Utilities/ApiCalls';
 import sampleBooks from '../../sampleData/sampleBooks';
 import sampleBook from '../../sampleData/sampleBook'
 
 
 const App = () => {
-  const [allBooks, setAllBooks] = useState(sampleBooks.results.books)
+  const [allBooks, setAllBooks] = useState([])
+
+  const getBooks = async () => {
+    const allData = await fetchApi()
+    console.log(allData)
+    const books = allData.results.lists.reduce((accumulator, currentlist) => {
+      currentlist.books.forEach(book => {
+        accumulator.push(book)
+      })
+      return accumulator;
+    }, [])
+    setAllBooks(books)
+  }
+
+  useEffect(() => {
+    getBooks()
+  }, [])
 
   return (
     <div className="App">
