@@ -15,13 +15,17 @@ const Form =  () => {
     setSearchQuery('')
   }
 
-  const showingMsg = !searched ? 'Showing all books' : `Showing results for '${searchQuery}'`
+  const showingMsg = <h3>{`Showing results for '${searchQuery}'`}<Link to={`/`}><button onClick={reset}>Reset</button></Link></h3>
+
+  const searchField = <div>
+    <input type="search" value={searchQuery} onInput={(event) => setSearchQuery(event.target.value)}></input>
+    <Link to={`/search/${searchQuery}`}><button onClick={search}>Search All Books</button></Link>
+  </div>
 
   return (
     <form>
-      {!searched && <input type="search" value={searchQuery} onInput={(event) => setSearchQuery(event.target.value)}></input>}
-      {!searched && <Link to={`/search/${searchQuery}`}><button onClick={search}>Search</button></Link>}
-      {searched && <h3>{showingMsg}<Link to={`/`}><button onClick={reset}>Reset</button></Link></h3>}
+      {!searched && searchField}
+      {searched && showingMsg}
     </form>
   )
 }
