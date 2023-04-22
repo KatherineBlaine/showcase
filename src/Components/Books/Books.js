@@ -2,8 +2,8 @@ import React from 'react';
 import Book from '../Book/Book';
 import './Books.css'
 
-const Books = ({ allBooks }) => {
-  const bookCards = allBooks.map(book => {
+const Books = ({ booksToDisplay }) => {
+  const bookCards = booksToDisplay.map(book => {
     return (
       <Book
         img={book.book_image}

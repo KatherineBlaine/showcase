@@ -11,10 +11,15 @@ import './App.css';
 
 const App = () => {
   const [allBooks, setAllBooks] = useState([])
+  const [filteredBooks, setFilteredBooks] = useState([])
 
   const filterBooksByQuery = (query) => {
     const filteredBooks = allBooks.filter(book => book.title.includes(query) || book.title.includes(query.toUpperCase()))
-    setAllBooks(filteredBooks)
+    setFilteredBooks(filteredBooks)
+  }
+
+  const resetBooks = () => {
+    setFilteredBooks([])
   }
 
   const getBooks = async () => {
@@ -29,10 +34,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header search={filterBooksByQuery}/>
-      <Form />
+      <Header />
+      <Form search={filterBooksByQuery} reset={resetBooks}/>
       <Switch>
-        <Route exact path='/'><Books allBooks={allBooks}/></Route>
+        <Route exact path='/'>
+          {filteredBooks.length === 0 ? <Books booksToDisplay={allBooks}/> : <Books booksToDisplay={filteredBooks}/>}
+        </Route>
         <Route path='/:id' render={({match}) => {
           const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
           return (
