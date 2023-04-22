@@ -22,26 +22,30 @@ const App = () => {
     getBooks()
   }, [])
 
-
   return (
     <div className="App">
       <Header />
-      <Form/>
       <Switch>
-        <Route exact path='/'><Books booksToDisplay={allBooks}/></Route>
+        <Route exact path='/'>
+          <div>
+            <Form />
+            <Books booksToDisplay={allBooks}/>
+          </div>
+        </Route>
         <Route path='/search/:searchQuery' render={({match}) => {
           const filteredBooks = allBooks.filter(book => book.title.includes(match.params.searchQuery) || book.title.includes(match.params.searchQuery.toUpperCase()))
           return (
-            <Books booksToDisplay={filteredBooks}/>
-          )
-        }}>
+            <div>
+              <Form />
+              <Books booksToDisplay={filteredBooks}/>
+            </div>
+          )}}>
         </Route>
         <Route path='/book/:id' render={({match}) => {
           const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
           return (
             <BookInfo selectedBook={selectedBook}/>
-          )
-        }}>
+          )}}>
         </Route>
       </Switch>
     </div>
