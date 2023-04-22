@@ -11,14 +11,17 @@ import './App.css';
 
 const App = () => {
   const [allBooks, setAllBooks] = useState([])
+  const [searched, setSearched] = useState(false)
   const [filteredBooks, setFilteredBooks] = useState([])
 
   const filterBooksByQuery = (query) => {
+    setSearched(true)
     const filteredBooks = allBooks.filter(book => book.title.includes(query) || book.title.includes(query.toUpperCase()))
     setFilteredBooks(filteredBooks)
   }
 
   const resetBooks = () => {
+    setSearched(false)
     setFilteredBooks([])
   }
 
@@ -35,10 +38,10 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Form search={filterBooksByQuery} reset={resetBooks}/>
+      <Form search={filterBooksByQuery} reset={resetBooks} searched={searched}/>
       <Switch>
         <Route exact path='/'>
-          {filteredBooks.length === 0 ? <Books booksToDisplay={allBooks}/> : <Books booksToDisplay={filteredBooks}/>}
+          {searched ? <Books booksToDisplay={filteredBooks}/> : <Books booksToDisplay={allBooks}/>}
         </Route>
         <Route path='/:id' render={({match}) => {
           const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
