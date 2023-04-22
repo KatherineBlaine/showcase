@@ -1,4 +1,3 @@
-import sampleBook from '../../sampleData/sampleBook'
 import { Link } from 'react-router-dom'
 import './BookInfo.css'
 

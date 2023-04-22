@@ -1,7 +1,7 @@
 const cleanData = (data) => {
   data.forEach(value => {
     if(value.primary_isbn10 === '' || 'none') {
-      value.primary_isbn10 = value.primary_isbn13
+      value.primary_isbn10 = value.primary_isbn13;
     }
   })
 
