@@ -5,6 +5,7 @@ import { fetchApi } from '../../Utilities/ApiCalls';
 import Books from '../Books/Books';
 import BookInfo from '../BookInfo/BookInfo';
 import Header from '../Header/Header';
+import Form from '../Form/Form';
 import cleanData from '../../Utilities/dataCleaning';
 import './App.css';
 
@@ -29,6 +30,7 @@ const App = () => {
   return (
     <div className="App">
       <Header search={filterBooksByQuery}/>
+      <Form />
       <Switch>
         <Route exact path='/'><Books allBooks={allBooks}/></Route>
         <Route path='/:id' render={({match}) => {
