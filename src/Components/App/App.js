@@ -11,19 +11,6 @@ import './App.css';
 
 const App = () => {
   const [allBooks, setAllBooks] = useState([])
-  // const [filteredBooks, setFilteredBooks] = useState([])
-  // const [searched, setSearched] = useState(false)
-
-  // const filterBooksByQuery = (query) => {
-  //   setSearched(true)
-  //   const filteredBooks = allBooks.filter(book => book.title.includes(query) || book.title.includes(query.toUpperCase()))
-  //   setFilteredBooks(filteredBooks)
-  // }
-
-  // const resetBooks = () => {
-  //   setSearched(false)
-  //   setFilteredBooks([])
-  // }
 
   const getBooks = async () => {
     const data = await fetchApi()
@@ -35,25 +22,14 @@ const App = () => {
     getBooks()
   }, [])
 
-  const mainView = 
-    <div>
-      <Form/>
-      <Books booksToDisplay={allBooks}/>
-    </div>
-
-  // const filteredView = 
-  //   <div>
-  //     <Form />
-  //     <Books booksToDisplay={filteredBooks}/>
-  //   </div>
 
   return (
     <div className="App">
       <Header />
+      <Form/>
       <Switch>
-        <Route exact path='/'>{mainView}</Route>
+        <Route exact path='/'><Books booksToDisplay={allBooks}/></Route>
         <Route path='/search/:searchQuery' render={({match}) => {
-          console.log(match.params)
           const filteredBooks = allBooks.filter(book => book.title.includes(match.params.searchQuery) || book.title.includes(match.params.searchQuery.toUpperCase()))
           return (
             <Books booksToDisplay={filteredBooks}/>
@@ -61,7 +37,6 @@ const App = () => {
         }}>
         </Route>
         <Route path='/book/:id' render={({match}) => {
-          console.log(match.params)
           const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
           return (
             <BookInfo selectedBook={selectedBook}/>

@@ -4,31 +4,26 @@ import './Form.css'
 
 const Form =  () => {
   const [searchQuery, setSearchQuery] = useState('')
+  const [searched, setSearched] = useState(false)
 
-  // const submitQuery = (event) => {
-  //   event.preventDefault()
-  //   search(searchQuery)
-  // }
+  const search = () => {
+    setSearched(true)
+  }
 
-  // const resetSearch = () => {
-  //   setSearchQuery('')
-  //   reset()
-  // }
-  
+  const reset = () => {
+    setSearched(false)
+    setSearchQuery('')
+  }
+
+  const showingMsg = !searched ? 'Showing all books' : `Showing results for '${searchQuery}'`
+
   return (
     <form>
-      <input type="search" value={searchQuery} onInput={(event) => setSearchQuery(event.target.value)}></input>
-      <Link to={`/search/${searchQuery}`}>Search</Link>
-      {/* {searched && <h3>{`Showing results for '${searchQuery}'`}<button>Reset Search</button></h3>} */}
+      {!searched && <input type="search" value={searchQuery} onInput={(event) => setSearchQuery(event.target.value)}></input>}
+      {!searched && <Link to={`/search/${searchQuery}`}><button onClick={search}>Search</button></Link>}
+      {searched && <h3>{showingMsg}<Link to={`/`}><button onClick={reset}>Reset</button></Link></h3>}
     </form>
   )
 }
-
-// Search Results As Route
-// Clicking search would route user to a dynamic URL using the query
-// {`/${query}`}
-// pass query as prop 
-// Make seach button a link to /:query
-// Make route in App that will display filtered books by this query in this route
 
 export default Form;
