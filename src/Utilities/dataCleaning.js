@@ -1,13 +1,13 @@
-const cleanData = (data) => {
-  data.forEach(value => {
-    if(value.primary_isbn10 === '' || 'none') {
-      value.primary_isbn10 = value.primary_isbn13;
+const cleanData = (bookData) => {
+  bookData.forEach(book => {
+    if(book.primary_isbn10 === '' || 'none') {
+      book.primary_isbn10 = book.primary_isbn13;
     }
   })
 
-  const uniqueBooks = data.reduce((accumulator, currentValue) => {
-    if (!accumulator.find((value) => value.title === currentValue.title)) {
-      accumulator.push(currentValue);
+  const uniqueBooks = bookData.reduce((accumulator, currentBook) => {
+    if (!accumulator.find((book) => book.title === currentBook.title)) {
+      accumulator.push(currentBook);
     }
     return accumulator;
   }, []);

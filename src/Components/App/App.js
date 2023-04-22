@@ -11,9 +11,14 @@ import './App.css';
 const App = () => {
   const [allBooks, setAllBooks] = useState([])
 
+  const filterBooksByQuery = (query) => {
+    const filteredBooks = allBooks.filter(book => book.title.includes(query) || book.title.includes(query.toUpperCase()))
+    setAllBooks(filteredBooks)
+  }
+
   const getBooks = async () => {
     const data = await fetchApi()
-    const books = cleanData(data)
+    const books = await cleanData(data)
     setAllBooks(books)
   }
 
@@ -23,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header search={filterBooksByQuery}/>
       <Switch>
         <Route exact path='/'><Books allBooks={allBooks}/></Route>
         <Route path='/:id' render={({match}) => {
