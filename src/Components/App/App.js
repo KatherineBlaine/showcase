@@ -32,7 +32,7 @@ const App = () => {
   }, [])
 
   const loadingPage = loading && <h3 className='loading'>LOADING</h3>
-  const errorPage = error !== '' && <h1>Error: {error}, please try again.</h1>
+  const errorPage = error !== '' && <h3 className='error'>Error: {error}, please try again.</h3>
   const mainPage = !loading && error === '' ? <div><Form /><Books booksToDisplay={allBooks}/></div> : null
 
   return (

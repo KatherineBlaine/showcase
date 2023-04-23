@@ -4,6 +4,7 @@
   width: 100vw;
 }
 
-.loading {
+.loading, .error {
   text-align: center;
 }
+
