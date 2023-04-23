@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ivory;
+}
+
+.search-elements {
+  display: flex;
+  justify-content: space-around;
+  width: 25vw;
+  align-items: center;
+}
+
+.explore {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: larger;
+
+}
+
+button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border: 5px solid white;
+  background-color: aliceblue;
+  padding: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input:hover {
+  cursor: text;
+}
+
+
+/* font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Righteous', cursive; */

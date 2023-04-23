@@ -1,18 +1,66 @@
 .book-info {
   display: flex;
-  justify-content: center;
-  /* width: 60vw; */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  justify-content: space-evenly;
 }
 
 .book-title {
   text-align: center;
 }
 
+.genre {
+  font-size: medium;
+  font-weight: lighter !important;
+}
+
 .right-content {
   text-align: center;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40%;
 }
 
 .description {
   width: fit-content;
+}
+
+.stat-tag {
+  padding: 2px;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  width: 12vw;
+  height: 12vh;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.genre-tag {
+  font-weight: bold;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  align-self: center;
+}
+
+.genre {
+  font-style: italic;
+}
+
+.book-stat {
+  background-color: white;
+  width: 5vw;
+  padding: 12px;
+  margin: 0;
+  border-radius: 45%;
+  margin-top: 10px;
+  font-size: 40px;
+  color: red;
 }

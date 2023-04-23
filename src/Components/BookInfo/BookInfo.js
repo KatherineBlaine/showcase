@@ -4,14 +4,16 @@ import './BookInfo.css'
 const BookInfo = ({ selectedBook }) => {
   return (
     <div className='book-info'>
-      <img src={selectedBook.book_image}></img>
+      <img src={selectedBook.book_image} className='info-img'></img>
         <div className='right-content'>
-          <h1 className='book-title'>{selectedBook.title}</h1>  
+          <h1 className='book-title'>{selectedBook.title}</h1>
           <h2 className='description'>{selectedBook.description}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>#{selectedBook.rank} on NYT bestsellers list</p>
-        <p>{selectedBook.weeks_on_list} weeks on NYT bestseller list</p>
-        <Link to='/' className='link'>HOME</Link>
+          <p className='genre-tag'>Genre:<p className='genre'>{selectedBook.genre}</p></p>
+          <div className='stats'>
+            <p className='stat-tag'>Weeks on bestseller list: <p className='book-stat'>{selectedBook.weeks_on_list}</p></p>
+            <p className='stat-tag'>Current Rank:<p className='book-stat'> #{selectedBook.rank}</p></p>
+          </div>
+          <Link to='/' className='link'><button>HOME</button></Link>
         </div>
     </div>
   )
