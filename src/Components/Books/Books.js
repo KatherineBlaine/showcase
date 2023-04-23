@@ -16,15 +16,15 @@ const Books = ({ booksToDisplay }) => {
     )
   })
 
-  const noResults = <div>
+  const noResults = <div className='no-results'>
     <h3>No results! Please try searching for something else.</h3>
     <Link to='/'><button>HOME</button></Link>
   </div>
 
+  const books = <div className='books-container'>{bookCards}</div>
+
   return (
-    <div className='books-container'>
-      {bookCards.length !== 0 ? bookCards : noResults}
-    </div>
+    bookCards.length !== 0 ? books : noResults
   )
 }
 

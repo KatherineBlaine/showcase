@@ -20,7 +20,7 @@ const App = () => {
       const books = await cleanData(data)
       setAllBooks(books)
     } catch(error) {
-        setError(error.message)
+        setError('Server Error')
     }
   }
 
@@ -33,10 +33,12 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/'>
-          <div>
-            <Form />
-            <Books booksToDisplay={allBooks}/>
-          </div>
+          {error === '' ?
+            <div>
+              <Form />
+              <Books booksToDisplay={allBooks}/>
+            </div>
+          : <h1>Error: {error}, please try again.</h1>}
         </Route>
         <Route path='/search/:searchQuery' render={({match}) => {
           const filteredBooks = allBooks.filter(book => book.title.includes(match.params.searchQuery) || book.title.includes(match.params.searchQuery.toUpperCase()))
