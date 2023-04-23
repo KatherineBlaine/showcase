@@ -11,11 +11,16 @@ import './App.css';
 
 const App = () => {
   const [allBooks, setAllBooks] = useState([])
+  const [error, setError] = useState('')
 
   const getBooks = async () => {
-    const data = await fetchApi()
-    const books = await cleanData(data)
-    setAllBooks(books)
+    try {
+      const data = await fetchApi()
+      const books = await cleanData(data)
+      setAllBooks(books)
+    } catch(error) {
+        setError(error.message)
+    }
   }
 
   useEffect(() => {
