@@ -2,6 +2,8 @@
   display: flex;
   font-family: 'Plus Jakarta Sans', sans-serif;
   justify-content: space-evenly;
+  border-top: 6px solid wheat;
+  padding-top: 30px;
 }
 
 .book-title {
