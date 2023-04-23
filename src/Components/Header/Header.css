@@ -8,3 +8,13 @@
 input {
   height: min-content;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'Righteous', cursive; 
+  font-weight: lighter;
+}
