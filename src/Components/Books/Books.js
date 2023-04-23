@@ -32,5 +32,13 @@ const Books = ({ booksToDisplay }) => {
 export default Books;
 
 Books.propTypes = {
-  booksToDisplay: PropTypes.arrayOf(PropTypes.object)
+  booksToDisplay: PropTypes.arrayOf(PropTypes.shape({
+    book_image: PropTypes.string,
+    author: PropTypes.string,
+    description: PropTypes.string,
+    primary_isbn10: PropTypes.string,
+    rank: PropTypes.number,
+    weeks_on_list: PropTypes.number,
+    genre: PropTypes.string
+  }))
 }
