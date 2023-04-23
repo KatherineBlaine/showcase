@@ -6,31 +6,43 @@ import Books from '../Books/Books';
 import BookInfo from '../BookInfo/BookInfo';
 import Header from '../Header/Header';
 import Form from '../Form/Form';
+import NotFound from '../NotFound/NotFound';
 import cleanData from '../../Utilities/dataCleaning';
 import './App.css';
 
 const App = () => {
   const [allBooks, setAllBooks] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const getBooks = async () => {
-    const data = await fetchApi()
-    const books = await cleanData(data)
-    setAllBooks(books)
+    try {
+      setLoading(true)
+      const data = await fetchApi('https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=E9xtZB07yTZcCOoDRFhWpJmAEhjNMQ2r')
+      const books = await cleanData(data)
+      setAllBooks(books)
+    } catch(error) {
+        setError('Server Error')
+    }
+    setLoading(false)
   }
 
   useEffect(() => {
     getBooks()
   }, [])
 
+  const loadingPage = loading && <h3 className='loading'>LOADING</h3>
+  const errorPage = error !== '' && <h3 className='error'>Error: {error}, please try again.</h3>
+  const mainPage = !loading && error === '' ? <div><Form /><Books booksToDisplay={allBooks}/></div> : null
+
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path='/'>
-          <div>
-            <Form />
-            <Books booksToDisplay={allBooks}/>
-          </div>
+          {loadingPage}
+          {errorPage}
+          {mainPage}
         </Route>
         <Route path='/search/:searchQuery' render={({match}) => {
           const filteredBooks = allBooks.filter(book => book.title.includes(match.params.searchQuery) || book.title.includes(match.params.searchQuery.toUpperCase()))
@@ -46,6 +58,9 @@ const App = () => {
           return (
             <BookInfo selectedBook={selectedBook}/>
           )}}>
+        </Route>
+        <Route path='*'>
+          <NotFound/>
         </Route>
       </Switch>
     </div>

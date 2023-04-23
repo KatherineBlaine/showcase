@@ -4,11 +4,9 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
-  /* background-color: aliceblue; */
   padding: 10px;
- 
   width: 15vw;
-  /* box-shadow: 1px, 1px, 1px, 1px, #ccc; */
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .card-img {
