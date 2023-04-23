@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from '../Book/Book';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Books.css'
 
@@ -29,3 +30,10 @@ const Books = ({ booksToDisplay }) => {
 }
 
 export default Books;
+
+Books.propTypes = {
+  booksToDisplay: PropTypes.arrayOf(PropTypes.shape({
+    book_image: PropTypes.string,
+    author: PropTypes.string,
+  }))
+}
