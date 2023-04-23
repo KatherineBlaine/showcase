@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
+
 import './BookInfo.css'
 
 const BookInfo = ({ selectedBook }) => {
@@ -20,3 +22,15 @@ const BookInfo = ({ selectedBook }) => {
 }
 
 export default BookInfo;
+
+BookInfo.propTypes = {
+  selectedBook: PropTypes.shape({
+    book_image: PropTypes.string,
+    author: PropTypes.string,
+    description: PropTypes.string,
+    primary_isbn10: PropTypes.string,
+    rank: PropTypes.number,
+    weeks_on_list: PropTypes.number,
+    genre: PropTypes.string
+  })
+}
