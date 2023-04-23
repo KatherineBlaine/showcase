@@ -46,7 +46,7 @@
 
 .genre-tag {
   font-weight: bold;
-  background-color: white;
+  background-color: aliceblue;
   border-radius: 15px;
   padding: 20px;
   align-self: center;
@@ -57,12 +57,23 @@
 }
 
 .book-stat {
-  background-color: white;
+  background-color: red;
   width: 5vw;
   padding: 12px;
   margin: 0;
   border-radius: 45%;
   margin-top: 10px;
   font-size: 40px;
-  color: red;
+  color: white;
+}
+
+.back-btn {
+  font-size: 25px;
+  background-color: white;
+  border: 3px solid aliceblue;
+  width: 5vw;
+}
+
+.back-btn:hover {
+  background-color: aliceblue;
 }
