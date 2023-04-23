@@ -8,3 +8,8 @@
 input {
   height: min-content;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

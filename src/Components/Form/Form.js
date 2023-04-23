@@ -12,8 +12,8 @@ const Form =  () => {
   return (
     <form>
       <input type="search" value={searchQuery} onInput={(event) => setSearchQuery(event.target.value)}></input>
-      <Link to={`/search/${searchQuery}`}><button>Search All Books</button></Link>
-      <Link to={`/`}><button onClick={reset}>Reset</button></Link>
+      <Link to={`/search/${searchQuery}`} className="link"><button>Search All Books</button></Link>
+      <Link to={`/`} className="link"><button onClick={reset}>Reset</button></Link>
     </form>
   )
 }
