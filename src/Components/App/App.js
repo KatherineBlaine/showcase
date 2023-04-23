@@ -6,6 +6,7 @@ import Books from '../Books/Books';
 import BookInfo from '../BookInfo/BookInfo';
 import Header from '../Header/Header';
 import Form from '../Form/Form';
+import NotFound from '../NotFound/NotFound';
 import cleanData from '../../Utilities/dataCleaning';
 import './App.css';
 
@@ -51,6 +52,9 @@ const App = () => {
           return (
             <BookInfo selectedBook={selectedBook}/>
           )}}>
+        </Route>
+        <Route path='*'>
+          <NotFound/>
         </Route>
       </Switch>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from '../Book/Book';
+import { Link } from 'react-router-dom';
 import './Books.css'
 
 const Books = ({ booksToDisplay }) => {
@@ -15,9 +16,14 @@ const Books = ({ booksToDisplay }) => {
     )
   })
 
+  const noResults = <div>
+    <h3>No results! Please try searching for something else.</h3>
+    <Link to='/'><button>HOME</button></Link>
+  </div>
+
   return (
     <div className='books-container'>
-      {bookCards}
+      {bookCards.length !== 0 ? bookCards : noResults}
     </div>
   )
 }
