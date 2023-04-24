@@ -14,6 +14,7 @@ const App = () => {
   const [allBooks, setAllBooks] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [selectedBook, setSelectedBook] = useState({})
 
   const getBooks = async () => {
     try {
@@ -41,7 +42,8 @@ const App = () => {
     )}
 
   const showBookInfo = (match) => {
-    const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
+    const selected = allBooks.find(book => book.primary_isbn10 === match.params.id)
+    setSelectedBook(selected)
     return (
       <BookInfo selectedBook={selectedBook}/>
     )}
