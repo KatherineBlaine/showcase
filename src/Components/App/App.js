@@ -33,7 +33,6 @@ const App = () => {
 
   const showSearchResults = (match) => {
     const filteredBooks = allBooks.filter(book => book.title.includes(match.params.searchQuery) || book.title.includes(match.params.searchQuery.toUpperCase()));
-
     return (
       <div>
         <Form />
@@ -43,7 +42,6 @@ const App = () => {
 
   const showBookInfo = (match) => {
     const selectedBook = allBooks.find(book => book.primary_isbn10 === match.params.id)
-
     return (
       <BookInfo selectedBook={selectedBook}/>
     )}
