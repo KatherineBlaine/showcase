@@ -15,7 +15,7 @@ Bookwise is an application that allows users to browse and search the New York T
 
 [//]: <>
 
-![Preview of Bookwise Application](preview.png)
+![Preview of Bookwise Application](./public/preview.png)
 
 
 ## Context:
