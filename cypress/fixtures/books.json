@@ -1,0 +1,194 @@
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2023 The New York Times Company.  All Rights Reserved.",
+    "num_results": 230,
+    "results": {
+        "bestsellers_date": "2023-04-15",
+        "published_date": "2023-04-30",
+        "published_date_description": "latest",
+        "previous_published_date": "2023-04-23",
+        "next_published_date": "",
+        "lists": [
+            {
+                "list_id": 704,
+                "list_name": "Combined Print and E-Book Fiction",
+                "list_name_encoded": "combined-print-and-e-book-fiction",
+                "display_name": "Combined Print & E-Book Fiction",
+                "updated": "WEEKLY",
+                "list_image": null,
+                "list_image_width": null,
+                "list_image_height": null,
+                "books": [
+                    {
+                        "age_group": "",
+                        "amazon_product_url": "https://www.amazon.com/dp/0593422414?tag=NYTBSREV-20",
+                        "article_chapter_link": "",
+                        "author": "John Sandford",
+                        "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593422410.jpg",
+                        "book_image_width": 331,
+                        "book_image_height": 500,
+                        "book_review_link": "",
+                        "book_uri": "nyt://book/11725517-9a58-5e28-845c-d474d7ce7a86",
+                        "contributor": "by John Sandford",
+                        "contributor_note": "",
+                        "created_date": "2023-04-19 22:15:29",
+                        "description": "The second book in the Letty Davenport series. Letty takes an undercover assignment that puts her in harm’s way with a group of hackers.",
+                        "first_chapter_link": "",
+                        "price": "0.00",
+                        "primary_isbn10": "0593422422",
+                        "primary_isbn13": "9780593422427",
+                        "publisher": "Putnam",
+                        "rank": 1,
+                        "rank_last_week": 0,
+                        "sunday_review_link": "",
+                        "title": "DARK ANGEL",
+                        "updated_date": "2023-04-19 22:20:17",
+                        "weeks_on_list": 1,
+                        "buy_links": [
+                            {
+                                "name": "Amazon",
+                                "url": "https://www.amazon.com/dp/0593422414?tag=NYTBSREV-20"
+                            },
+                            {
+                                "name": "Apple Books",
+                                "url": "https://goto.applebooks.apple/9780593422427?at=10lIEQ"
+                            },
+                            {
+                                "name": "Barnes and Noble",
+                                "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780593422427"
+                            },
+                            {
+                                "name": "Books-A-Million",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FDARK%252BANGEL%252FJohn%252BSandford%252F9780593422427&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DDARK%252BANGEL%252BJohn%252BSandford"
+                            },
+                            {
+                                "name": "Bookshop",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780593422427&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DDARK%2BANGEL"
+                            },
+                            {
+                                "name": "IndieBound",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780593422427%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DDARK%2BANGEL%2BJohn%2BSandford%26aff%3DNYT"
+                            }
+                        ]
+                    },
+                    {
+                        "age_group": "",
+                        "amazon_product_url": "https://www.amazon.com/dp/1501171348?tag=NYTBSREV-20",
+                        "article_chapter_link": "",
+                        "author": "Laura Dave",
+                        "book_image": "https://storage.googleapis.com/du-prd/books/images/9781501171345.jpg",
+                        "book_image_width": 331,
+                        "book_image_height": 500,
+                        "book_review_link": "",
+                        "book_uri": "nyt://book/13b09b58-ad39-56d5-bb93-c1f7eecd83b8",
+                        "contributor": "by Laura Dave",
+                        "contributor_note": "",
+                        "created_date": "2023-04-19 22:15:29",
+                        "description": "Hannah Hall discovers truths about her missing husband and bonds with his daughter from a previous relationship.",
+                        "first_chapter_link": "",
+                        "price": "0.00",
+                        "primary_isbn10": "1501171356",
+                        "primary_isbn13": "9781501171352",
+                        "publisher": "Marysue Rucci",
+                        "rank": 2,
+                        "rank_last_week": 10,
+                        "sunday_review_link": "",
+                        "title": "THE LAST THING HE TOLD ME",
+                        "updated_date": "2023-04-19 22:20:17",
+                        "weeks_on_list": 40,
+                        "buy_links": [
+                            {
+                                "name": "Amazon",
+                                "url": "https://www.amazon.com/dp/1501171348?tag=NYTBSREV-20"
+                            },
+                            {
+                                "name": "Apple Books",
+                                "url": "https://goto.applebooks.apple/9781501171352?at=10lIEQ"
+                            },
+                            {
+                                "name": "Barnes and Noble",
+                                "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9781501171352"
+                            },
+                            {
+                                "name": "Books-A-Million",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLAST%252BTHING%252BHE%252BTOLD%252BME%252FLaura%252BDave%252F9781501171352&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLAST%252BTHING%252BHE%252BTOLD%252BME%252BLaura%252BDave"
+                            },
+                            {
+                                "name": "Bookshop",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9781501171352&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLAST%2BTHING%2BHE%2BTOLD%2BME"
+                            },
+                            {
+                                "name": "IndieBound",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9781501171352%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLAST%2BTHING%2BHE%2BTOLD%2BME%2BLaura%2BDave%26aff%3DNYT"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "list_id": 708,
+                "list_name": "Combined Print and E-Book Nonfiction",
+                "list_name_encoded": "combined-print-and-e-book-nonfiction",
+                "display_name": "Combined Print & E-Book Nonfiction",
+                "updated": "WEEKLY",
+                "list_image": null,
+                "list_image_width": null,
+                "list_image_height": null,
+                "books": [
+                    {
+                        "age_group": "",
+                        "amazon_product_url": "https://www.amazon.com/dp/0593236599?tag=NYTBSREV-20",
+                        "article_chapter_link": "",
+                        "author": "Peter Attia with Bill Gifford",
+                        "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593236598.jpg",
+                        "book_image_width": 385,
+                        "book_image_height": 500,
+                        "book_review_link": "",
+                        "book_uri": "nyt://book/69f6e624-4f30-59d6-8103-816d17ae5ec1",
+                        "contributor": "by Peter Attia with Bill Gifford",
+                        "contributor_note": "",
+                        "created_date": "2023-04-19 22:15:30",
+                        "description": "A look at recent scientific research on aging and longevity.",
+                        "first_chapter_link": "",
+                        "price": "0.00",
+                        "primary_isbn10": "0593236599",
+                        "primary_isbn13": "9780593236598",
+                        "publisher": "Harmony",
+                        "rank": 1,
+                        "rank_last_week": 1,
+                        "sunday_review_link": "",
+                        "title": "OUTLIVE",
+                        "updated_date": "2023-04-19 22:20:18",
+                        "weeks_on_list": 3,
+                        "buy_links": [
+                            {
+                                "name": "Amazon",
+                                "url": "https://www.amazon.com/dp/0593236599?tag=NYTBSREV-20"
+                            },
+                            {
+                                "name": "Apple Books",
+                                "url": "https://goto.applebooks.apple/9780593236598?at=10lIEQ"
+                            },
+                            {
+                                "name": "Barnes and Noble",
+                                "url": "https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780593236598"
+                            },
+                            {
+                                "name": "Books-A-Million",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FOUTLIVE%252FPeter%252BAttia%252Bwith%252BBill%252BGifford%252F9780593236598&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DOUTLIVE%252BPeter%252BAttia%252Bwith%252BBill%252BGifford"
+                            },
+                            {
+                                "name": "Bookshop",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780593236598&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DOUTLIVE"
+                            },
+                            {
+                                "name": "IndieBound",
+                                "url": "https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780593236598%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DOUTLIVE%2BPeter%2BAttia%2Bwith%2BBill%2BGifford%26aff%3DNYT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}      
