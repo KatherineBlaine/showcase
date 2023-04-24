@@ -52,6 +52,17 @@ describe('home page', () => {
     cy.get('.books-container').children().should('have.length', 1)
   })
 
+  it('Should display an error message and home button if no books match the search query', () => {
+    cy.get('input').type('zzz')
+    cy.get('[href="/search/zzz"] > button').click()
+
+    cy.url().should('eq', 'http://localhost:3000/search/zzz')
+    cy.get('.no-results').should('be.visible')
+    cy.get('h3').should('be.visible').contains('No results! Please try searching for something else.')
+    cy.get('.no-results > a > button').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
+
   it('Should be able to reset search and show all books again', () => {
     cy.get('input').type('dark')
     cy.get('input').should('have.value', 'dark')
@@ -80,7 +91,6 @@ describe('home page', () => {
     cy.get(':nth-child(1) > .book-stat').should('be.visible').contains(1)
     cy.get('.stats > :nth-child(2)').should('be.visible').contains('Current Rank: #')
     cy.get(':nth-child(2) > .book-stat').should('be.visible').contains(1)
-
   })
 
   it('Should return home when  the back arrow button is clicked', () => {
